@@ -1,0 +1,11 @@
+text,label
+"Free money, no strings attached! Just send your bank details now.",spam
+"Hey, are you coming to the meeting tomorrow?",ham
+Congratulations! You've won a $1000 gift card. Claim now!,spam
+Reminder: Your appointment is scheduled for 10 AM.,ham
+"URGENT: Your account has been compromised, click here to reset your password.",spam
+"Let's catch up soon, I missed our last coffee chat.",ham
+"Limited time offer! Buy 1, get 1 free on all items.",spam
+"Hey, I need your help with a project. Can you review this document?",ham
+"Exclusive offer for you: 50% off on all services, today only!",spam
+"Hi, just checking in on the progress of the task you were working on.",ham

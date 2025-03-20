@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Pass/Fail Prediction</title>
+</head>
+<body>
+    <h2>Enter Student Marks</h2>
+    <form action="/predict" method="post">
+        <input type="number" name="marks" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>

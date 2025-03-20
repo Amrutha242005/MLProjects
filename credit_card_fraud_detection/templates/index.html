@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Credit Card Fraud Detection</h2>
+    <form action="/predict" method="post">
+        <label>Transaction Amount:</label>
+        <input type="text" name="transaction_amount" required><br>
+        
+        <label>Time Since Last Transaction (minutes):</label>
+        <input type="text" name="time_since_last_txn" required><br>
+        
+        <label>Transaction Distance (km):</label>
+        <input type="text" name="txn_distance" required><br>
+        
+        <label>Transaction Count in Last Hour:</label>
+        <input type="text" name="txn_count_last_hour" required><br>
+        
+        <label>Average Transaction Amount (Last 10 Txns):</label>
+        <input type="text" name="avg_txn_amount_10" required><br>
+        
+        <label>Fraud History (0 = No, 1 = Yes):</label>
+        <input type="text" name="fraud_history" required><br>
+        
+        <label>Latitude:</label>
+        <input type="text" name="latitude" required><br>
+        
+        <label>Longitude:</label>
+        <input type="text" name="longitude" required><br>
+        
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

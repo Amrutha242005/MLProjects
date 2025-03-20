@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label>Square Footage:</label><input type="text" name="SquareFootage" required><br>
+        <label>Number of Rooms:</label><input type="text" name="NumberOfRooms" required><br>
+        <label>Lot Size:</label><input type="text" name="LotSize" required><br>
+        <label>Average Distance to Local Amenities:</label><input type="text" name="AverageDistanceToLocalAmenities" required><br>
+        <label>Recent Sales Prices of Similar Homes (Lakhs):</label><input type="text" name="RecentSalesPrices" required><br>
+        <label>Age of the Property:</label><input type="text" name="AgeOfProperty" required><br>
+        <label>Number of Floors:</label><input type="text" name="NumberOfFloors" required><br>
+        <label>Water Sources :</label><input type="text" name="WaterSources" required><br>
+        <label>Parking:</label><input type="text" name="Parking" required><br>
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html>

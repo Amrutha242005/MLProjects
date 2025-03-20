@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Loan Approval Prediction</h2>
+
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="Age" required>
+
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="Income" required>
+
+        <label for="credit_score">Credit Score:</label>
+        <input type="number" id="credit_score" name="Credit_Score" required>
+
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" id="loan_amount" name="Loan_Amount" required>
+
+        <label for="employment">Employment Status:</label>
+        <select id="employment" name="Employment_Status" required>
+            <option value="Employed">Employed</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Self-Employed">Self-Employed</option>
+        </select>
+
+        <label for="loan_term">Loan Term (Months):</label>
+        <select id="loan_term" name="Loan_Term" required>
+            <option value="12">12</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+            <option value="60">60</option>
+        </select>
+
+        <button type="submit">Predict Loan Approval</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Prediction Result: <strong>{{ prediction }}</strong></h3>
+    {% endif %}
+
+</body>
+</html>
+
