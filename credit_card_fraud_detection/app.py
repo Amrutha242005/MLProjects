@@ -37,7 +37,7 @@ def predict():
         result = "Fraudulent Transaction Detected" if prediction == 1 else "Legitimate Transaction"
 
         return render_template("result.html", result=result)
-
+#exception handling
     except Exception as e:
         return f"Error: {str(e)}"
 
